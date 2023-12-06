@@ -6,9 +6,9 @@ import "./App.css";
 
 function App() {
   const [inputText, setInputText] = useState("");
-  const [tasks, setTasks] = useState(["Task 1", "Task 2", "Task 3"]); 
 
   const inputHandler = (e) => {
+    // конвертація тексту введення до нижнього регістру
     const lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
   };
@@ -17,7 +17,7 @@ function App() {
     <>
       <div>
         <h1>Мій Todo List</h1>
-        <TodoList tasks={tasks} filterText={inputText} />
+        <TodoList />
       </div>
 
       <div className="main">
